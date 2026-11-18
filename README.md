@@ -31,7 +31,7 @@ Available for NeoForge, Forge and Fabric.
 
 - **You can't reach the villager behind you.** While you sit in the camel's front seat, the game does not let you aim at a passenger on the same camel. This is how the vanilla client works, and a server-only mod cannot change it. Get off the camel first, then sneak + right-click the villager.
 - **Seated villagers don't sleep or work.** A villager on a camel or llama stays awake at night and does not go to its job site until it gets off. Vanilla also makes it get off when the camel or llama goes under water.
-- **Turning into a zombie villager.** If a seated villager is killed by a zombie and turns into a zombie villager, the game keeps it seated, and sneak + right-click does not let it off. The same happens to a villager struck by lightning, which turns into a witch.
+- **Turning into a zombie villager.** If a seated villager is killed by a zombie and turns into a zombie villager, the game keeps it seated, and sneak + right-click does not let it off. A seated villager struck by lightning turns into a witch that is not seated.
 
 ## Requirements
 
@@ -63,7 +63,7 @@ No configuration. There is no config file, and the mod adds no messages or sound
 
 ## Compatibility
 
-- **Existing worlds:** works right away. Removing the mod is also safe. Villagers that are seated stay seated, because riding is saved by the game itself, Without the mod they only get off the vanilla way, for example when the camel or llama goes under water, or with the `/ride` command.
+- **Existing worlds:** works right away. Removing the mod is also safe. Villagers that are seated stay seated, because riding is saved by the game itself. Without the mod they only get off the vanilla way, for example when the camel or llama goes under water, or with the `/ride` command.
 - **Mods that add villager professions:** villagers with those professions can ride like any other villager.
 - **Mods that change camels, llamas or villagers:** the mod only adds the boarding check when a camel or llama bumps into a villager, the sneak + right-click on a seated villager, and the rule that a seated villager does not steer its mount. Everything else stays vanilla.
 
