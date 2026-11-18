@@ -1,8 +1,13 @@
 {
   "required": true,
+  "minVersion": "0.8",
   "package": "io.github.emberbocor.villagerriders.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "EntityMixin",
+    "LivingEntityMixin",
+    "VillagerMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },
