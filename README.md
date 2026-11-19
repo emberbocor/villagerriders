@@ -31,7 +31,7 @@ Available for NeoForge, Forge and Fabric.
 
 - **You can't reach the villager behind you.** While you sit in the camel's front seat, the game does not let you aim at a passenger on the same camel. This is how the vanilla client works, and a server-only mod cannot change it. Get off the camel first, then sneak + right-click the villager.
 - **Seated villagers don't sleep or work.** A villager on a camel or llama stays awake at night and does not go to its job site until it gets off. Vanilla also makes it get off when the camel or llama goes under water.
-- **Turning into a zombie villager.** If a seated villager is killed by a zombie and turns into a zombie villager, the game keeps it seated, and sneak + right-click does not let it off. A seated villager struck by lightning turns into a witch that is not seated.
+- **Turning into a zombie villager or a witch.** If a seated villager is killed by a zombie and turns into a zombie villager, or is struck by lightning and turns into a witch, the game keeps it seated, and sneak + right-click does not let it off.
 
 ## Requirements
 
