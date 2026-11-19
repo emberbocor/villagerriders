@@ -19,10 +19,10 @@ Available for NeoForge, Forge and Fabric.
 ## How it works
 
 - **Camel.** The camel must have a player in its front seat. A villager boards only while the back seat is free: an adult camel has two seats, so it takes one villager. A baby camel has no seat to spare. When the back seat is taken, the camel pushes other villagers aside as usual.
-- **Llama.** The llama must wear a carpet and have no passenger yet, and it carries one villager. It must be on a lead held by a player, or be part of a caravan whose front llama is on a lead held by a player. A llama tied to a fence, or a trader llama led by a wandering trader, never picks up villagers.
+- **Llama.** The llama must be tamed, wear a carpet and have no passenger yet, and it carries one villager. In survival a carpet only goes on a tamed llama anyway; an untamed llama would throw the villager off again. It must be on a lead held by a player, or be part of a caravan whose front llama is on a lead held by a player. A llama tied to a fence, or a trader llama led by a wandering trader, never picks up villagers.
 - **Getting back on.** If you get off a camel with a villager on it, the villager moves to the front seat. When you get back on, you take the front seat again, the villager moves to the back, and you can steer as before.
 - **Getting off.** Sneak + right-click works on any villager sitting on a camel or llama. It does not open the trading screen. Like any mob leaving a vehicle, the villager needs about three seconds before it can board again, so a villager that stays next to your camel or llama climbs back on after that.
-- **Seated villagers don't steer.** While seated, a villager does not steer the camel or llama. The camel or llama follows its own AI, its lead and its caravan.
+- **Seated villagers don't steer.** While seated, a villager does not steer the camel or llama. The camel or llama follows its own AI, its lead and its caravan. The one exception is a villager put on an untamed llama with commands: there it steers as in vanilla, so the llama does not throw it off.
 - **Who can ride.** Only villagers. Wandering traders and zombie villagers never board.
 - **Which mounts.** Only camels, llamas and trader llamas. Horses, donkeys, mules, boats and minecarts are not changed.
 - **Saving.** Riding villagers are saved by the game itself and are still seated after the world is reloaded.

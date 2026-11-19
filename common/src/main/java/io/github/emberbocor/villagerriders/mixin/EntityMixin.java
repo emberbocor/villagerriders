@@ -13,7 +13,7 @@ import net.minecraft.world.entity.npc.Villager;
 public abstract class EntityMixin {
     @Inject(method = "canControlVehicle", at = @At("HEAD"), cancellable = true)
     private void villagerriders$neverSteerMount(CallbackInfoReturnable<Boolean> cir) {
-        if ((Object) this instanceof Villager villager && VillagerRiders.isRiding(villager)) {
+        if ((Object) this instanceof Villager villager && VillagerRiders.isPassiveRider(villager)) {
             cir.setReturnValue(false);
         }
     }
