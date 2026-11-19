@@ -2,9 +2,10 @@ package io.github.emberbocor.villagerriders;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.animal.camel.Camel;
-import net.minecraft.world.entity.animal.horse.AbstractHorse;
-import net.minecraft.world.entity.animal.horse.Llama;
-import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.animal.camel.CamelHusk;
+import net.minecraft.world.entity.animal.equine.AbstractHorse;
+import net.minecraft.world.entity.animal.equine.Llama;
+import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.entity.player.Player;
 
 public final class VillagerRiders {
@@ -15,7 +16,7 @@ public final class VillagerRiders {
     }
 
     public static boolean isMount(Entity entity) {
-        return entity instanceof Camel || entity instanceof Llama;
+        return (entity instanceof Camel && !(entity instanceof CamelHusk)) || entity instanceof Llama;
     }
 
     public static boolean isRiding(Villager villager) {
@@ -28,13 +29,13 @@ public final class VillagerRiders {
     }
 
     public static boolean canPickUp(Entity mount, Villager villager) {
-        if (villager.isPassenger()) {
+        if (villager.isPassenger() || !isMount(mount)) {
             return false;
         }
         if (mount instanceof Camel camel) {
             return camel.getFirstPassenger() instanceof Player && !camel.isBaby() && camel.getPassengers().size() < 2;
         }
-        return mount instanceof Llama llama && llama.isTamed() && !llama.isVehicle() && llama.getSwag() != null && isLedByPlayer(llama);
+        return mount instanceof Llama llama && llama.isTamed() && !llama.isVehicle() && llama.isWearingBodyArmor() && isLedByPlayer(llama);
     }
 
     private static boolean isLedByPlayer(Llama llama) {

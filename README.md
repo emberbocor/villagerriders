@@ -24,7 +24,7 @@ Available for NeoForge, Forge and Fabric.
 - **Getting off.** Sneak + right-click works on any villager sitting on a camel or llama. It does not open the trading screen. Like any mob leaving a vehicle, the villager needs about three seconds before it can board again, so a villager that stays next to your camel or llama climbs back on after that.
 - **Seated villagers don't steer.** While seated, a villager does not steer the camel or llama. The camel or llama follows its own AI, its lead and its caravan. The one exception is a villager put on an untamed llama with commands: there it steers as in vanilla, so the llama does not throw it off.
 - **Who can ride.** Only villagers. Wandering traders and zombie villagers never board.
-- **Which mounts.** Only camels, llamas and trader llamas. Horses, donkeys, mules, boats and minecarts are not changed.
+- **Which mounts.** Only camels, llamas and trader llamas. Camel husks, horses, donkeys, mules, boats and minecarts are not changed.
 - **Saving.** Riding villagers are saved by the game itself and are still seated after the world is reloaded.
 
 ### Limits
@@ -37,11 +37,11 @@ Available for NeoForge, Forge and Fabric.
 
 | | NeoForge | Forge | Fabric |
 |---|---|---|---|
-| Minecraft | 1.21.1 | 1.21.1 | 1.21 or 1.21.1 |
-| Loader | NeoForge 21.1.1 or newer | Forge 52.0.0 or newer | Fabric Loader 0.15.10 or newer |
-| Jar | `villagerriders-neoforge-1.21.1-<version>.jar` | `villagerriders-forge-1.21.1-<version>.jar` | `villagerriders-fabric-1.21-1.21.1-<version>.jar` |
+| Minecraft | 1.21.11 | 1.21.11 | 1.21.11 |
+| Loader | NeoForge 21.11.42 or newer | Forge 61.0.1 or newer | Fabric Loader 0.17.3 or newer |
+| Jar | `villagerriders-neoforge-1.21.11-<version>.jar` | `villagerriders-forge-1.21.11-<version>.jar` | `villagerriders-fabric-1.21.11-<version>.jar` |
 
-On Minecraft 1.21.1, NeoForge and Forge are separate loaders that do not run each other's mods, so each has its own jar. Pick the jar that matches your server's loader.
+On Minecraft 1.21.11, NeoForge and Forge are separate loaders that do not run each other's mods, so each has its own jar. Pick the jar that matches your server's loader.
 
 The Fabric version does not need Fabric API.
 

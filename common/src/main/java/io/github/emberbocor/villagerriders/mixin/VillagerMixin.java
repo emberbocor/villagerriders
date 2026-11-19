@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import io.github.emberbocor.villagerriders.VillagerRiders;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.entity.player.Player;
 
 @Mixin(Villager.class)
@@ -20,7 +20,7 @@ public abstract class VillagerMixin {
             if (!villager.level().isClientSide()) {
                 villager.stopRiding();
             }
-            cir.setReturnValue(InteractionResult.sidedSuccess(villager.level().isClientSide()));
+            cir.setReturnValue(InteractionResult.SUCCESS);
         }
     }
 }
