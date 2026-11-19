@@ -22,7 +22,7 @@ Available for NeoForge, Forge and Fabric.
 - **Llama.** The llama must be tamed, wear a carpet and have no passenger yet, and it carries one villager. In survival a carpet only goes on a tamed llama anyway; an untamed llama would throw the villager off again. It must be on a lead held by a player, or be part of a caravan whose front llama is on a lead held by a player. A llama tied to a fence, or a trader llama led by a wandering trader, never picks up villagers.
 - **Getting back on.** If you get off a camel with a villager on it, the villager moves to the front seat. When you get back on, you take the front seat again, the villager moves to the back, and you can steer as before.
 - **Getting off.** Sneak + right-click works on any villager sitting on a camel or llama. It does not open the trading screen. Like any mob leaving a vehicle, the villager needs about three seconds before it can board again, so a villager that stays next to your camel or llama climbs back on after that.
-- **Seated villagers don't steer.** While seated, a villager does not steer the camel or llama. The camel or llama follows its own AI, its lead and its caravan. The one exception is a villager put on an untamed llama with commands: there it steers as in vanilla, so the llama does not throw it off.
+- **Seated villagers don't steer.** While seated, a villager does not steer the camel or llama. The camel or llama follows its own AI, its lead and its caravan.
 - **Who can ride.** Only villagers. Wandering traders and zombie villagers never board.
 - **Which mounts.** Only camels, llamas and trader llamas. Horses, donkeys, mules, boats and minecarts are not changed.
 - **Saving.** Riding villagers are saved by the game itself and are still seated after the world is reloaded.
@@ -35,13 +35,13 @@ Available for NeoForge, Forge and Fabric.
 
 ## Requirements
 
-| | NeoForge | Forge | Fabric |
-|---|---|---|---|
-| Minecraft | 1.21.1 | 1.21.1 | 1.21 or 1.21.1 |
-| Loader | NeoForge 21.1.1 or newer | Forge 52.0.0 or newer | Fabric Loader 0.15.10 or newer |
-| Jar | `villagerriders-neoforge-1.21.1-<version>.jar` | `villagerriders-forge-1.21.1-<version>.jar` | `villagerriders-fabric-1.21-1.21.1-<version>.jar` |
+| | Forge / NeoForge | Fabric |
+|---|---|---|
+| Minecraft | 1.20.1 | 1.20 or 1.20.1 |
+| Loader | Forge 47.1.0 or newer, or NeoForge 1.20.1 (47.1.x) | Fabric Loader 0.14.21 or newer |
+| Jar | `villagerriders-forge-1.20.1-<version>.jar` | `villagerriders-fabric-1.20-1.20.1-<version>.jar` |
 
-On Minecraft 1.21.1, NeoForge and Forge are separate loaders that do not run each other's mods, so each has its own jar. Pick the jar that matches your server's loader.
+On Minecraft 1.20.1, NeoForge still runs Forge mods, so the Forge jar is used for both.
 
 The Fabric version does not need Fabric API.
 
@@ -49,8 +49,7 @@ The Fabric version does not need Fabric API.
 
 Install the mod on the server only, on every loader. It adds no items, blocks, entities, network messages or registries. Riding passengers are sent to the client by the game itself:
 
-- **NeoForge:** vanilla clients and NeoForge clients without the mod can join.
-- **Forge:** vanilla clients and Forge clients without the mod can join. The mod is marked as server-only, so a Forge client without it still shows the server as compatible in the server list.
+- **Forge and NeoForge:** vanilla clients and Forge or NeoForge clients without the mod can join. The mod is marked as server-only, so a client without it still shows the server as compatible in the server list.
 - **Fabric:** vanilla clients and Fabric clients without the mod can join.
 
 Installing it on a client as well does no harm.
@@ -73,7 +72,7 @@ No configuration. There is no config file, and the mod adds no messages or sound
 ./gradlew build
 ```
 
-The jars are written to `neoforge/build/libs/`, `forge/build/libs/` and `fabric/build/libs/`.
+The jars are written to `forge/build/libs/` and `fabric/build/libs/`.
 
 ## License
 

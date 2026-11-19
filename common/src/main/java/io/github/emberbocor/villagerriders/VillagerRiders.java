@@ -2,7 +2,6 @@ package io.github.emberbocor.villagerriders;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.animal.camel.Camel;
-import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import net.minecraft.world.entity.animal.horse.Llama;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.player.Player;
@@ -22,11 +21,6 @@ public final class VillagerRiders {
         return isMount(villager.getVehicle());
     }
 
-    // An untamed llama throws off a rider that does not steer it (and a led one any rider), so it takes no villager and a villager put on it steers as in vanilla.
-    public static boolean isPassiveRider(Villager villager) {
-        return villager.getVehicle() instanceof AbstractHorse mount && isMount(mount) && mount.isTamed();
-    }
-
     public static boolean canPickUp(Entity mount, Villager villager) {
         if (villager.isPassenger()) {
             return false;
@@ -34,6 +28,7 @@ public final class VillagerRiders {
         if (mount instanceof Camel camel) {
             return camel.getFirstPassenger() instanceof Player && !camel.isBaby() && camel.getPassengers().size() < 2;
         }
+        // An untamed llama throws off its rider, so it takes no villager.
         return mount instanceof Llama llama && llama.isTamed() && !llama.isVehicle() && llama.getSwag() != null && isLedByPlayer(llama);
     }
 
